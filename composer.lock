@@ -1,0 +1,60 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "e988d6e655d1264b69e447bc05ac7add",
+    "packages": [
+        {
+            "name": "robertboeser/robo-http",
+            "version": "v0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robertboeser/php-robo-http.git",
+                "reference": "fedc03caecd2fde1f42f2dcddbd01e48eada6f31"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robertboeser/php-robo-http/zipball/fedc03caecd2fde1f42f2dcddbd01e48eada6f31",
+                "reference": "fedc03caecd2fde1f42f2dcddbd01e48eada6f31",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Robo\\RoboHttp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Robert Böser",
+                    "email": "code@robertboeser.de"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/robertboeser/php-robo-http/issues",
+                "source": "https://github.com/robertboeser/php-robo-http/tree/v0.3.0"
+            },
+            "time": "2023-11-25T00:34:29+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^8.0"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
+}
