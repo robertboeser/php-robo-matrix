@@ -13,7 +13,7 @@ class Room extends Base {
     }
 
     function joinRooms($users) {
-        $access = @static::state?->apiAccess();
+        $access = @static::$state?->apiAccess();
         if(!$access) return false;
         // join invited rooms if creator and member is in users
         $req = new Request($access->api);

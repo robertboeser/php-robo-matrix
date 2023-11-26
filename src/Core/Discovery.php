@@ -24,7 +24,7 @@ class Discovery extends Base {
         if(!$base) return false;
         $base = trim($base, '/');
 
-        if(static::state) static::state->set('api', $base);
+        if(static::$state) static::$state->set('api', $base);
 
         return $base;
     }

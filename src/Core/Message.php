@@ -6,7 +6,7 @@ use Robo\RoboHttp\Request;
 class Message {
 
     function send($roomId, $message) {
-        $access = @static::state?->apiAccess();
+        $access = @static::$state?->apiAccess();
         if(!$access) return false;
 
         $req = new Request($access->api);

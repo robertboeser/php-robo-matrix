@@ -6,7 +6,7 @@ use Robo\RoboHttp\Request;
 class Sync extends Base {
 
     function sync() {
-        $access = @static::state?->apiAccess();
+        $access = @static::$state?->apiAccess();
         if(!$access) return false;
 
         $req = new Request($access->api);

@@ -6,7 +6,7 @@ use Robo\RoboHttp\Request;
 class Login extends Base {
 
     function password($usr, $pwd) {
-        $api = @static::state?->api;
+        $api = @static::$state?->api;
         if(!$api) return false;
 
         $req = new Request($api);
@@ -22,14 +22,14 @@ class Login extends Base {
         $res = $req->post('/_matrix/client/v3/login', $hdr, json_encode($dat));
         $dat = json_decode($res);
 
-        static::state->set('access_token', $dat->access_token);
-        static::state->set('device_id', $dat->device_id);
+        static::$state->set('access_token', $dat->access_token);
+        static::$state->set('device_id', $dat->device_id);
 
         return $dat;
     }
 
     function getFlows() {
-        $api = @static::state?->api;
+        $api = @static::$state?->api;
         if(!$api) return false;
 
         $req = new Request($api);
