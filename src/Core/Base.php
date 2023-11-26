@@ -10,10 +10,10 @@ class Base {
     protected static Request $request;
 
     static function setState(State $state) {
-        $this->state = $state;
+        static::$state = $state;
     }
 
     static function setRequest(Request $request) {
-        $this->request = $request;
+        static::$request = $request;
     }
 }
