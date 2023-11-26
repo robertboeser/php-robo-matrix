@@ -1,5 +1,5 @@
 <?php
-namespace Robo\RoboMatrix\Core;
+namespace Robo\RoboMatrix\Util;
 
 class State {
     protected $storage;
