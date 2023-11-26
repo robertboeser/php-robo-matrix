@@ -3,7 +3,7 @@ namespace Robo\RoboMatrix\Core;
 
 use Robo\RoboHttp\Request;
 
-class Message {
+class Message extends Base {
 
     function send($roomId, $message) {
         $access = @static::$state?->apiAccess();
