@@ -6,7 +6,7 @@ use Robo\RoboHttp\Request;
 class Login extends Base {
 
     function password($usr, $pwd) {
-        $api = @static::$state?->get('api');
+        $api = static::$state?->get('api');
         if(!$api) return false;
 
         $req = new Request($api);
@@ -29,7 +29,7 @@ class Login extends Base {
     }
 
     function getFlows() {
-        $api = @static::$state?->get('api');
+        $api = static::$state?->get('api');
         if(!$api) return false;
 
         $req = new Request($api);

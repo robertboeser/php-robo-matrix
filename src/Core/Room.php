@@ -13,12 +13,12 @@ class Room extends Base {
     }
 
     function joinRooms($users) {
-        $access = @static::$state?->apiAccess();
-        if(!$access) return false;
+        $s = static::$state;
+        if(!$s) return false;
         // join invited rooms if creator and member is in users
-        $req = new Request($access->api);
+        $req = new Request($s->api);
         $hdr = [
-            'Authorization' => "Bearer {$access->access_token}"
+            'Authorization' => "Bearer {$s->access_token}"
         ];
 
         $invites = @$this->events?->invite;

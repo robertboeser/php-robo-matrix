@@ -6,12 +6,12 @@ use Robo\RoboHttp\Request;
 class Sync extends Base {
 
     function sync() {
-        $access = @static::$state?->apiAccess();
-        if(!$access) return false;
+        $s = static::$state;
+        if(!$s) return false;
 
-        $req = new Request($access->api);
+        $req = new Request($s->api);
         $hdr = [
-            'Authorization' => "Bearer {$access->access_token}"
+            'Authorization' => "Bearer {$s->access_token}"
         ];
         $res = $req->get('/_matrix/client/v3/sync', $hdr);
         //file_put_contents(__DIR__.'/../../data/sync.json', $res);

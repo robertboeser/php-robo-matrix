@@ -30,6 +30,15 @@ class State {
         $this->write($obj);
     }
 
+    function __get($key) {
+        return $this->get($key);
+    }
+
+    function __set($key, $val) {
+        return $this->set($key, $val);
+    }
+
+
     function apiAccess() {
         $obj = $this->read();
         if(empty($obj->api) || empty($obj->access_token)) return null;
